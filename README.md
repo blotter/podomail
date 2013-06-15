@@ -9,18 +9,17 @@ and dovecot
 Usage
 -----
 
-podomail domain  show
-podomail mailbox show
-podomail mailbox add  <email> [password]
-podomail mailbox del  <email>
-podomail forward show
-podomail forward add  <src email> <dst email>
-podomail forward del  <src email> <dst email>
-podomail export  dovecot.passwd
-podomail export  postfix.mailbox_domains
-podomail export  postfix.mailbox_maps
-podomail export  postfix.alias_maps
-
+    podomail domain  show
+             mailbox show
+             mailbox add  <email> [password]
+             mailbox del  <email>
+             forward show
+             forward add  <src email> <dst email>
+             forward del  <src email> <dst email>
+             export  dovecot.passwd
+             export  postfix.mailbox_domains
+             export  postfix.mailbox_maps
+             export  postfix.alias_maps
 
 License
 -------
