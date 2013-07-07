@@ -1,0 +1,4 @@
+Feel free to contribute!
+========================
+
+- use salted passwords (had issues with byte/string conversion the last time i tried)
