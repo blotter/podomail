@@ -30,9 +30,12 @@ import sys
 import re
 import sqlite3
 from Crypto.Hash import SHA512
+# wir moechten salzen
+import binascii
 
 ### config
 filename = "/etc/podomail.sqlite3"
+salt = binascii.b2a_hex(os.urandom(5)).decode("ascii")
 
 
 ### functions
@@ -142,6 +145,7 @@ elif len(sys.argv) > 3 and sys.argv[1] == 'mailbox' and sys.argv[2] == 'add':
 	if len(password) < 8:
 		error("password too short")
 		sys.exit(1)
+	password += salt
 
 	# generate hash of password
 	sha = SHA512.new(password.encode('ascii', 'ignore'))
